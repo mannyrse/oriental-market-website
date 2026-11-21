@@ -8,6 +8,7 @@
     --color-subtext: #7D7D7D;
     --color-line: #BDBBB5;
     --color-card-text: #1E1E1E;
+    --color-title-box: #EAE4CC;
 
     --color-green: #C9D39C;
     --color-peach: #F5C9B8;
@@ -163,7 +164,8 @@ img {
     overflow: hidden;
 }
 
-.favorites h2 {
+.favorites h2,
+.products h2 {
     margin: 0 0 0.75rem;
     font-weight: 600;
     font-size: clamp(1.5rem, 2vw, 1.75rem);
@@ -285,6 +287,230 @@ img {
 
     .carousel-track.is-animated {
         animation: none;
+    }
+}
+
+/* Products Grid */
+
+.products {
+    padding-block: 4rem 5rem;
+}
+
+.category-grid {
+    --grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: var(--grid-gap);
+    margin-top: 2.5rem;
+}
+
+/* Two stacked columns on desktop (created by categories-carousel.js) */
+.category-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap);
+}
+
+.category-card {
+    --card-color: var(--color-green);
+    --list-text: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-col>.category-card:last-child {
+    flex: 1;
+}
+
+.category-card--green {
+    --card-color: var(--color-green);
+}
+
+.category-card--peach {
+    --card-color: var(--color-peach);
+}
+
+.category-card--coral {
+    --card-color: var(--color-coral);
+}
+
+.category-card--blue {
+    --card-color: var(--color-blue);
+}
+
+.category-viewport {
+    position: relative;
+    display: flex;
+    flex: 1;
+    background-color: var(--card-color);
+}
+
+/* Native scroll-snap = swipe on touch, trackpad, and keyboard for free */
+.category-slides {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+}
+
+.category-slides::-webkit-scrollbar {
+    display: none;
+}
+
+.category-slides:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -4px;
+}
+
+.category-slide {
+    position: relative;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+.category-list {
+    margin: 0;
+    padding: 2.25rem 3.5rem 3.75rem;
+    color: var(--list-text);
+    font-weight: 600;
+    font-size: clamp(1rem, 1.35vw, 1.25rem);
+    line-height: 1.45;
+}
+
+.category-list[data-columns="2"] {
+    columns: 2;
+    column-gap: 2rem;
+}
+
+.category-list li {
+    break-inside: avoid;
+    padding-left: 0.25rem;
+}
+
+/* The photo fills the slide so only the list decides the card's height */
+.category-slide--image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 3.5rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    opacity: 0.65;
+    cursor: pointer;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+    transition: opacity 0.2s ease;
+}
+
+.category-arrow--prev {
+    left: 0.25rem;
+}
+
+.category-arrow--next {
+    right: 0.25rem;
+}
+
+.category-arrow:hover,
+.category-arrow:focus-visible {
+    opacity: 1;
+}
+
+.category-arrow:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+}
+
+.category-arrow:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.category-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.category-dot {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.category-dot::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.2s ease;
+}
+
+.category-dot.is-active::before {
+    opacity: 1;
+}
+
+.category-title {
+    padding: 1rem 1.5rem 1.15rem;
+    background-color: var(--color-title-box);
+}
+
+.category-title h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+    line-height: 1.3;
+    color: var(--color-text);
+}
+
+.category-title p {
+    margin: 0.25rem 0 0;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    color: var(--color-card-text);
+}
+
+/* Single column: cards stack in the order they appear in categories.js */
+@media (max-width: 760px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+        --grid-gap: 1.5rem;
+    }
+
+    .category-list {
+        padding-inline: 3rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .category-list[data-columns="2"] {
+        columns: 1;
     }
 }
 

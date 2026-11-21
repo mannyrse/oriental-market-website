@@ -17,7 +17,7 @@
         const imageWrap = document.createElement('div');
         imageWrap.className = 'card-image';
         const img = document.createElement('img');
-        img.src = 'images/' + product.image;
+        img.src = 'images/featured/' + product.image;
         img.alt = product.name;
         imageWrap.appendChild(img);
 

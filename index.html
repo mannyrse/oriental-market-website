@@ -10,7 +10,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600&family=Oswald:wght@600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Oswald:wght@600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -53,8 +54,23 @@
                 </div>
             </div>
         </section>
+
+        <section class="favorites" id="products">
+            <div class="container">
+                <h2>A Few of Our Favorites</h2>
+                <p class="section-sub">A look at some of the most popular snacks, drinks, and other products you’ll find
+                    in our store.</p>
+            </div>
+
+            <!-- Cards are built from products.js by script.js -->
+            <div class="carousel">
+                <ul class="carousel-track"></ul>
+            </div>
+        </section>
     </main>
 
+    <script src="products.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

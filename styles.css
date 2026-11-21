@@ -2,10 +2,17 @@
 
 :root {
     --color-bg: #F6F4ED;
+    --color-bg-alt: #EAE3D7;
     --color-logo: #681630;
     --color-text: #30332F;
     --color-subtext: #7D7D7D;
     --color-line: #BDBBB5;
+    --color-card-text: #1E1E1E;
+
+    --color-green: #C9D39C;
+    --color-peach: #F5C9B8;
+    --color-coral: #FF746C;
+    --color-blue: #A7C7E7;
 
     --font-body: "DM Sans", system-ui, sans-serif;
     --font-logo: "Oswald", "Arial Narrow", sans-serif;
@@ -146,6 +153,139 @@ img {
     margin-left: auto;
     object-fit: cover;
     border-radius: 12px;
+}
+
+/* Favorites Carousel */
+
+.favorites {
+    background-color: var(--color-bg-alt);
+    padding-block: 4rem 4.5rem;
+    overflow: hidden;
+}
+
+.favorites h2 {
+    margin: 0 0 0.75rem;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 2vw, 1.75rem);
+    color: var(--color-text);
+}
+
+.section-sub {
+    margin: 0;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.3vw, 1.125rem);
+    color: var(--color-subtext);
+}
+
+.carousel {
+    margin-top: 3rem;
+    /* room so the card shadows aren't clipped */
+    padding-block: 1rem 1.5rem;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Class added by script.js once the cards are cloned */
+.carousel-track.is-animated {
+    animation: scroll-left var(--scroll-duration, 40s) linear infinite;
+    will-change: transform;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-1 * var(--scroll-distance)));
+    }
+}
+
+.card {
+    --card-color: var(--color-green);
+    flex: 0 0 auto;
+    width: 12.5rem;
+    /* margin (not gap) keeps the loop seamless */
+    margin-right: 1.5rem;
+    padding: 0.5rem 0.5rem 1.1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover lift (only on devices that actually hover, so it doesn't stick on touch) */
+@media (hover: hover) {
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    }
+}
+
+.card--green {
+    --card-color: var(--color-green);
+}
+
+.card--peach {
+    --card-color: var(--color-peach);
+}
+
+.card--coral {
+    --card-color: var(--color-coral);
+}
+
+.card--blue {
+    --card-color: var(--color-blue);
+}
+
+.card-image {
+    aspect-ratio: 4 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    background-color: var(--card-color);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-country {
+    margin: 0.75rem 0 0.35rem;
+    font-weight: 500;
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--card-color);
+}
+
+.card-name {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: var(--color-card-text);
+}
+
+/* Reduced motion: no auto-scroll, let people swipe/scroll instead */
+@media (prefers-reduced-motion: reduce) {
+    .carousel {
+        overflow-x: auto;
+    }
+
+    .carousel-track.is-animated {
+        animation: none;
+    }
 }
 
 /* Small Screens  */

@@ -319,6 +319,7 @@ img {
     flex-direction: column;
 }
 
+/* Bottom cards share a bottom edge: the shorter column's last card stretches */
 .category-col>.category-card:last-child {
     flex: 1;
 }
@@ -483,15 +484,15 @@ img {
 
 .category-title h3 {
     margin: 0;
-    font-weight: 600;
+    font-weight: 700;
     font-size: clamp(1.15rem, 1.6vw, 1.5rem);
     line-height: 1.3;
-    color: var(--color-text);
+    color: var(--color-card-text);
 }
 
 .category-title p {
-    margin: 0.25rem 0 0;
-    font-weight: 500;
+    margin: 0.3rem 0 0;
+    font-weight: 600;
     font-size: 0.8125rem;
     color: var(--color-card-text);
 }
@@ -512,6 +513,45 @@ img {
     .category-list[data-columns="2"] {
         columns: 1;
     }
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: var(--color-logo);
+    color: var(--color-bg);
+    padding-block: 2.5rem;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    font-family: var(--font-logo);
+    text-transform: uppercase;
+}
+
+.footer-name {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.footer-sub {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.footer-copy {
+    font-size: 0.875rem;
+    opacity: 0.85;
 }
 
 /* Small Screens  */

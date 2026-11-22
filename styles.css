@@ -607,6 +607,123 @@ img {
     }
 }
 
+/* Visit Us */
+
+.visit {
+    padding-bottom: 5rem;
+}
+
+.visit-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.2fr);
+    align-items: center;
+    gap: 3rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--color-line);
+}
+
+.visit-title {
+    margin: 0 0 1rem;
+    font-weight: 700;
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+}
+
+.visit-title .line {
+    display: block;
+}
+
+.visit-title .line--accent {
+    font-style: italic;
+    color: var(--color-logo);
+}
+
+.visit-phone {
+    margin: 1rem 0 0;
+    font-weight: 700;
+    font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+    color: var(--color-logo);
+}
+
+.visit-phone a:hover,
+.visit-phone a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.visit-block+.visit-block {
+    margin-top: 2.5rem;
+}
+
+.visit-block h3 {
+    margin: 0 0 0.6rem;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-logo);
+}
+
+.visit-block address,
+.hours {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--color-text);
+}
+
+.hours {
+    margin: 0;
+}
+
+.hours>div {
+    display: grid;
+    grid-template-columns: 6.5rem auto;
+    gap: 1rem;
+}
+
+.hours dt {
+    color: var(--color-subtext);
+}
+
+.hours dd {
+    margin: 0;
+}
+
+.visit-photo {
+    width: 100%;
+    max-width: 24rem;
+    justify-self: end;
+}
+
+.visit-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+    .visit-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 3rem;
+    }
+
+    .visit-title .line {
+        display: inline;
+    }
+
+    .visit-photo {
+        justify-self: start;
+    }
+}
+
 /* Footer */
 
 .site-footer {

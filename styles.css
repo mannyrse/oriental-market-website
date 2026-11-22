@@ -234,20 +234,34 @@ img {
     line-height: 1.3;
 }
 
+/* Section headings: price-tag banner */
+
+.section-tag {
+    --tag-color: var(--color-logo);
+    --tag-text: var(--color-bg);
+    width: fit-content;
+    /* The banner bleeds out to the left edge of the screen. The negative margin
+       pulls it left and the matching padding pushes the text back into place. */
+    margin: 0 0 1rem calc(50% - 50vw);
+    padding: 0.55rem 3.5rem 0.55rem calc(50vw - 50%);
+    background-color: var(--tag-color);
+    color: var(--tag-text);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 2vw, 1.75rem);
+    line-height: 1.3;
+    /* pointed, flat-tipped right end */
+    clip-path: polygon(0 0, calc(100% - 1.25rem) 0, 100% 30%, 100% 70%, calc(100% - 1.25rem) 100%, 0 100%);
+    /* punched hole near the tip */
+    -webkit-mask-image: radial-gradient(circle at calc(100% - 1.4rem) 50%, transparent 0.28rem, #000 0.3rem);
+    mask-image: radial-gradient(circle at calc(100% - 1.4rem) 50%, transparent 0.28rem, #000 0.3rem);
+}
+
 /* Favorites Carousel */
 
 .favorites {
     background-color: var(--color-bg-alt);
     padding-block: 4rem 4.5rem;
     overflow: hidden;
-}
-
-.favorites h2,
-.products h2 {
-    margin: 0 0 0.75rem;
-    font-weight: 600;
-    font-size: clamp(1.5rem, 2vw, 1.75rem);
-    color: var(--color-text);
 }
 
 .section-sub {

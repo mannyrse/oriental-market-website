@@ -63,8 +63,8 @@ img {
     align-items: flex-end;
     justify-content: space-between;
     gap: 1.5rem;
-    padding-top: 3rem;
-    padding-bottom: 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid var(--color-line);
     /* keeps the line inside the content width, not full bleed */
     max-width: var(--container-width);
@@ -83,7 +83,7 @@ img {
     color: var(--color-logo);
     font-family: var(--font-logo);
     font-weight: 700;
-    font-size: clamp(1.6rem, 3vw, 2.15rem);
+    font-size: clamp(1.35rem, 2.2vw, 1.75rem);
     text-transform: uppercase;
 }
 
@@ -91,19 +91,19 @@ img {
     color: var(--color-text);
     font-family: var(--font-logo);
     font-weight: 600;
-    font-size: clamp(1rem, 1.8vw, 1.45rem);
+    font-size: clamp(0.8rem, 1.3vw, 1.05rem);
     text-transform: uppercase;
 }
 
 .nav {
     display: flex;
-    gap: clamp(1.25rem, 4.6vw, 5.5rem);
+    gap: clamp(1.25rem, 3vw, 3rem);
     padding-bottom: 0.5rem;
 }
 
 .nav a {
-    font-weight: 600;
-    font-size: clamp(1rem, 1.6vw, 1.5rem);
+    font-weight: 500;
+    font-size: clamp(0.875rem, 1.1vw, 1rem);
     color: var(--color-text);
 }
 
@@ -115,7 +115,7 @@ img {
 /* Hero  */
 
 .hero {
-    min-height: calc(100vh - 9.5rem);
+    min-height: calc(100vh - 7rem);
     display: flex;
     align-items: center;
     padding-block: 3rem;
@@ -145,10 +145,10 @@ img {
 
 .hero-text h1 {
     margin: 0 0 1.75rem;
-    font-weight: 700;
-    font-size: clamp(2rem, 3.6vw, 3rem);
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+    font-weight: 600;
+    font-size: clamp(1.875rem, 3.3vw, 2.75rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
     color: var(--color-text);
 }
 
@@ -164,8 +164,8 @@ img {
 .hero-text p {
     margin: 0;
     font-weight: 400;
-    font-size: clamp(1rem, 1.3vw, 1.25rem);
-    line-height: 1.3;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.5;
     color: var(--color-subtext);
 }
 
@@ -174,14 +174,14 @@ img {
 .hero-visual {
     position: relative;
     width: 100%;
-    max-width: 30rem;
+    max-width: 29rem;
     justify-self: end;
 }
 
 .hero-photo {
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .hero-photo img {
@@ -195,8 +195,8 @@ img {
     position: absolute;
     right: -1rem;
     bottom: -2rem;
-    width: 10rem;
-    padding: 1.6rem 1rem 1.25rem;
+    width: 9rem;
+    padding: 1.5rem 1rem 1.15rem;
     background-color: var(--color-logo);
     color: var(--color-bg);
     text-align: center;
@@ -210,27 +210,27 @@ img {
     position: absolute;
     left: 50%;
     bottom: 100%;
-    width: 3.5rem;
-    height: 1.75rem;
+    width: 3rem;
+    height: 1.5rem;
     transform: translateX(-50%);
-    border: 0.3rem solid var(--color-logo);
+    border: 0.25rem solid var(--color-logo);
     border-bottom: 0;
-    border-radius: 1.75rem 1.75rem 0 0;
+    border-radius: 1.5rem 1.5rem 0 0;
 }
 
 .hero-badge strong {
     display: block;
-    font-weight: 700;
-    font-size: 2.75rem;
+    font-weight: 600;
+    font-size: 2.5rem;
     line-height: 1;
     letter-spacing: -0.02em;
 }
 
 .hero-badge span {
     display: block;
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
     font-weight: 500;
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     line-height: 1.3;
 }
 
@@ -243,11 +243,11 @@ img {
     /* The banner bleeds out to the left edge of the screen. The negative margin
        pulls it left and the matching padding pushes the text back into place. */
     margin: 0 0 1rem calc(50% - 50vw);
-    padding: 0.55rem 3.5rem 0.55rem calc(50vw - 50%);
+    padding: 0.5rem 3rem 0.5rem calc(50vw - 50%);
     background-color: var(--tag-color);
     color: var(--tag-text);
     font-weight: 600;
-    font-size: clamp(1.5rem, 2vw, 1.75rem);
+    font-size: clamp(1.4rem, 1.9vw, 1.65rem);
     line-height: 1.3;
     /* pointed, flat-tipped right end */
     clip-path: polygon(0 0, calc(100% - 1.25rem) 0, 100% 30%, 100% 70%, calc(100% - 1.25rem) 100%, 0 100%);
@@ -260,19 +260,19 @@ img {
 
 .favorites {
     background-color: var(--color-bg-alt);
-    padding-block: 4rem 4.5rem;
+    padding-block: 3.5rem 4rem;
     overflow: hidden;
 }
 
 .section-sub {
     margin: 0;
     font-weight: 400;
-    font-size: clamp(1rem, 1.3vw, 1.125rem);
+    font-size: clamp(0.9375rem, 1.1vw, 1rem);
     color: var(--color-subtext);
 }
 
 .carousel {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     /* room so the card shadows aren't clipped */
     padding-block: 1rem 1.5rem;
     overflow: hidden;
@@ -305,7 +305,7 @@ img {
 .card {
     --card-color: var(--color-green);
     flex: 0 0 auto;
-    width: 12.5rem;
+    width: 11rem;
     /* margin (not gap) keeps the loop seamless */
     margin-right: 1.5rem;
     padding: 0.5rem 0.5rem 1.1rem;
@@ -356,7 +356,7 @@ img {
 .card-country {
     margin: 0.75rem 0 0.35rem;
     font-weight: 500;
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--card-color);
@@ -365,7 +365,7 @@ img {
 .card-name {
     margin: 0;
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     line-height: 1.3;
     text-transform: uppercase;
     color: var(--color-card-text);
@@ -385,16 +385,16 @@ img {
 /* Products Grid */
 
 .products {
-    padding-block: 4rem 5rem;
+    padding-block: 3.5rem 4rem;
 }
 
 .category-grid {
-    --grid-gap: 2rem;
+    --grid-gap: 1.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
     gap: var(--grid-gap);
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 
 /* Two stacked columns on desktop (created by categories-carousel.js) */
@@ -467,16 +467,16 @@ img {
 
 .category-list {
     margin: 0;
-    padding: 2.25rem 3.5rem 3.75rem;
+    padding: 1.75rem 3rem 3rem;
     color: var(--list-text);
-    font-weight: 600;
-    font-size: clamp(1rem, 1.35vw, 1.25rem);
-    line-height: 1.45;
+    font-weight: 500;
+    font-size: clamp(0.875rem, 1.05vw, 1rem);
+    line-height: 1.5;
 }
 
 .category-list[data-columns="2"] {
     columns: 2;
-    column-gap: 2rem;
+    column-gap: 1.5rem;
 }
 
 .category-list li {
@@ -570,22 +570,22 @@ img {
 }
 
 .category-title {
-    padding: 1rem 1.5rem 1.15rem;
+    padding: 0.85rem 1.25rem 1rem;
     background-color: var(--color-title-box);
 }
 
 .category-title h3 {
     margin: 0;
-    font-weight: 700;
-    font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+    font-weight: 600;
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
     line-height: 1.3;
     color: var(--color-card-text);
 }
 
 .category-title p {
     margin: 0.3rem 0 0;
-    font-weight: 600;
-    font-size: 0.8125rem;
+    font-weight: 500;
+    font-size: 0.75rem;
     color: var(--color-card-text);
 }
 
@@ -610,7 +610,7 @@ img {
 /* Visit Us */
 
 .visit {
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
 }
 
 .visit-inner {
@@ -618,16 +618,16 @@ img {
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.2fr);
     align-items: center;
     gap: 3rem;
-    padding-top: 4rem;
+    padding-top: 3rem;
     border-top: 1px solid var(--color-line);
 }
 
 .visit-title {
     margin: 0 0 1rem;
-    font-weight: 700;
-    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 600;
+    font-size: clamp(1.8rem, 2.7vw, 2.4rem);
     line-height: 1.1;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.025em;
     color: var(--color-text);
 }
 
@@ -642,8 +642,8 @@ img {
 
 .visit-phone {
     margin: 1rem 0 0;
-    font-weight: 700;
-    font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+    font-weight: 600;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
     color: var(--color-logo);
 }
 
@@ -659,8 +659,8 @@ img {
 
 .visit-block h3 {
     margin: 0 0 0.6rem;
-    font-weight: 700;
-    font-size: 0.8125rem;
+    font-weight: 600;
+    font-size: 0.75rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--color-logo);
@@ -669,8 +669,8 @@ img {
 .visit-block address,
 .hours {
     font-style: normal;
-    font-weight: 600;
-    font-size: 0.9375rem;
+    font-weight: 500;
+    font-size: 0.875rem;
     line-height: 1.5;
     text-transform: uppercase;
     color: var(--color-text);
@@ -696,7 +696,7 @@ img {
 
 .visit-photo {
     width: 100%;
-    max-width: 24rem;
+    max-width: 22rem;
     justify-self: end;
 }
 
@@ -705,14 +705,15 @@ img {
     height: auto;
     aspect-ratio: 3 / 2;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
+/* Stack the three parts before they get cramped */
 @media (max-width: 900px) {
     .visit-inner {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding-top: 3rem;
+        padding-top: 2.5rem;
     }
 
     .visit-title .line {
@@ -729,7 +730,7 @@ img {
 .site-footer {
     background-color: var(--color-logo);
     color: var(--color-bg);
-    padding-block: 2.5rem;
+    padding-block: 2rem;
 }
 
 .footer-inner {
@@ -750,12 +751,12 @@ img {
 
 .footer-name {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .footer-sub {
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 
 .footer-copy {
@@ -767,7 +768,7 @@ img {
 
 @media (max-width: 760px) {
     .header-inner {
-        padding-top: 1.5rem;
+        padding-top: 1.25rem;
     }
 
     .hero {
@@ -794,6 +795,6 @@ img {
     .hero-badge {
         right: 1rem;
         bottom: -1.5rem;
-        width: 8.5rem;
+        width: 7.5rem;
     }
 }

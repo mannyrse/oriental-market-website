@@ -8,6 +8,39 @@
     <meta name="description"
         content="Korean-owned market in Jacksonville, NC, serving the community for over 20 years. Asian foods, fresh produce, and international favorites.">
 
+    <!-- Structured data so search engines can show the store's address, hours, and phone -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "GroceryStore",
+        "name": "Oriental Market",
+        "description": "Korean-owned market in Jacksonville, NC, serving the community for over 20 years. Asian foods, fresh produce, and international favorites.",
+        "telephone": "+1-910-353-3398",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "211D Western Blvd",
+            "addressLocality": "Jacksonville",
+            "addressRegion": "NC",
+            "postalCode": "28546",
+            "addressCountry": "US"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Sunday", "Monday"],
+                "opens": "13:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "10:00",
+                "closes": "19:00"
+            }
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link

@@ -12,5 +12,5 @@ const products = [
     { name: "Oishi Pillows Crackers", country: "Philippines", image: "pillows-crackers.png", color: "peach" },
     { name: "Three Crabs Fish Sauce", country: "Thailand", image: "fish-sauce.png", color: "coral" },
     { name: "Ramune", country: "Japan", image: "ramune.png", color: "blue" },
-    { name: "", country: "", image: "", color: "" },
+    // { name: "", country: "", image: "", color: "" },
 ];
